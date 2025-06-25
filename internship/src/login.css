@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: white;
+    overflow: hidden; /* Prevent scrollbars during animation */
+}
+
+/* Loading Screen Styles */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.loading-screen img {
+    width: 200px;
+    height: auto;
+}
+
+.f {
+    display: flex;
+    align-items: center; /* Aligns items (image + container) vertically */
+    justify-content: center; /* Centers them horizontally */
+    gap: 20px;
+    width: 100%; /* Ensure it spans full width */
+    height: 100vh; /* Full viewport height */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* Animation for the girl image (slides in from the left) */
+.f img {
+    height: 250px;
+    width: auto;
+    transform: translateX(-100%); /* Start off-screen to the left */
+    animation: slideInLeft 1s ease-out forwards; /* Animation */
+}
+
+@keyframes slideInLeft {
+    to {
+        transform: translateX(0); /* Move to original position */
+    }
+}
+
+/* Animation for the container (slides in from the right) */
+.container {
+    width: 700px;
+    height: 500px;
+    padding: 30px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: translateX(100%); /* Start off-screen to the right */
+    animation: slideInRight 1s ease-out forwards; /* Animation */
+}
+
+@keyframes slideInRight {
+    to {
+        transform: translateX(0); /* Move to original position */
+    }
+}
+
+.container img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 3px solid transparent;
+}
+
+.tab.active {
+    border-bottom: 3px solid #003b5b;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-btn {
+    width: 100%;
+    background: #2a2828;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background:blue;
+}
+
+/* Toast Notification Styles */
+.toast {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.toast.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.toast.success {
+    background-color: black;
+}
+
+.toast.error {
+    background-color: #a03741;
+}

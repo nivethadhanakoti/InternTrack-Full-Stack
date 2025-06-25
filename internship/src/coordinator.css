@@ -1,0 +1,199 @@
+/* /* #jsonData {
+    width: 100%; 
+    height: 400px; 
+    overflow: auto; 
+    border: 1px solid #ccc; 
+    padding: 10px;
+    background-color: white; 
+}
+
+
+#jsonData table {
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+
+#jsonData th, #jsonData td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+#jsonData th {
+    background-color: #f2f2f2;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+.container {
+    width: 700px;
+    padding: 30px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.filter-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 48%;
+}
+button {
+    padding: 10px;
+    border: none;
+    background-color: #2a2828;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+button:hover {
+    background-color: black;
+    transform: scale(1.1);
+}
+.modal-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.modal {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    max-width: 95%;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+img {
+    mix-blend-mode: multiply; 
+    background-color: #f4f4f4; 
+    height: 310px;
+} */
+
+
+.top-bar {
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+  padding: 0 20px;
+}
+
+.button-row button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.3s;
+}
+
+.button-row button:hover {
+  background-color: #0056b3;
+}
+
+.heading {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+.table-container {
+  width: 95%;
+  max-width: 1400px;
+  margin: 20px auto;
+  overflow-x: auto;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 20px;
+  max-height: 400px; 
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  text-align: left;
+  white-space: nowrap;
+}
+
+th {
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+tr:hover {
+  background-color: #eaf2ff;
+} 
